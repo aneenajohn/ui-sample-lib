@@ -21,21 +21,20 @@ export default [
         format: 'esm',
         sourcemap: true,
       },
-      {
-        file: 'dist/bundle.min.js',
-        format: 'iife',
-        name: 'version',
-        plugins: [terser()],
-        sourcemap: true,
-      },
+      // {
+      //   file: 'dist/min/bundle.min.js',
+      //   format: 'iife',
+      //   name: 'version',
+      //   plugins: [terser()],
+      //   sourcemap: true,
+      // },
     ],
     plugins: [
       resolve(), //DOCS: Resolves third-party module dependencies.
       commonjs(), //DOCS: Converts CommonJS modules to ESM.
       typescript({
         tsconfig: './tsconfig.json',
-        exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.ts'],
-      }), //DOCS:  Compiles TypeScript files, excluding test files and Storybook stories.
+      }), //DOCS:  Compiles TypeScript files
       postcss({ extensions: ['.css'], inject: true, extract: false }), //DOCS: Processes CSS files with PostCSS, injecting the styles into the bundled JavaScript.
     ],
   },
