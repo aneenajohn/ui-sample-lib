@@ -1,3 +1,4 @@
+import React from 'react';
 import './Button.css';
 
 type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
@@ -11,7 +12,7 @@ const Button = ({ variant, ...props }: ButtonProps) => {
         background: variant === 'primary' ? '#7676c9' : '#dc9d54',
         padding: '1rem',
         borderRadius: '0.5rem',
-        cursor: 'pointer',
+        cursor: props.disabled ? 'not-allowed' : 'pointer',
       }}
       className='button'
       {...props}
