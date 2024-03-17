@@ -35,7 +35,13 @@ export default [
       typescript({
         tsconfig: './tsconfig.json',
       }), //DOCS:  Compiles TypeScript files
-      postcss({ extensions: ['.css'], inject: true, extract: false }), //DOCS: Processes CSS files with PostCSS, injecting the styles into the bundled JavaScript.
+      postcss({
+        extensions: ['.css'],
+        minimize: true,
+        inject: true,
+        extract: false,
+        modules: true,
+      }), //DOCS: Processes CSS files with PostCSS, injecting the styles into the bundled JavaScript.
     ],
   },
   //   DOCS: Generating a TypeScript declaration file (.d.ts) for a library or package is essential
