@@ -1,6 +1,6 @@
 {
   "name": "kungfu-panda-ui",
-  "version": "1.0.6",
+  "version": "0.0.2",
   "description": "A sample ui comp library",
   "module": "dist/cjs/index.js",
   "main": "dist/esm/index.js",
