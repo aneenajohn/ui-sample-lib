@@ -11,23 +11,23 @@ export default [
   {
     input: 'src/index.ts',
     output: [
+      // {
+      //   file: packageJson.module,
+      //   format: 'cjs',
+      //   sourcemap: true,
+      // },
       {
         file: packageJson.main,
-        format: 'cjs',
-        sourcemap: true,
-      },
-      {
-        file: packageJson.module,
         format: 'esm',
         sourcemap: true,
       },
-      // {
-      //   file: 'dist/min/bundle.min.js',
-      //   format: 'iife',
-      //   name: 'version',
-      //   plugins: [terser()],
-      //   sourcemap: true,
-      // },
+      {
+        file: 'dist/min/bundle.min.js',
+        format: 'iife',
+        name: 'version',
+        plugins: [terser()],
+        sourcemap: true,
+      },
     ],
     plugins: [
       resolve(), //DOCS: Resolves third-party module dependencies.

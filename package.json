@@ -1,17 +1,17 @@
 {
   "name": "kungfu-panda-ui",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A sample ui comp library",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "browser": "dist/bundle.min.js",
-  "unpkg": "dist/bundle.min.js",
+  "module": "dist/cjs/index.js",
+  "main": "dist/esm/index.js",
+  "browser": "dist/min/bundle.min.js",
+  "unpkg": "dist/min/bundle.min.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf dist && rollup -c",
     "dev": "rollup -c --watch"
   },
   "author": "kungfu-panda",
