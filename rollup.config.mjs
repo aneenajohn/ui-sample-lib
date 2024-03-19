@@ -11,13 +11,13 @@ export default [
   {
     input: 'src/index.ts',
     output: [
-      // {
-      //   file: packageJson.module,
-      //   format: 'cjs',
-      //   sourcemap: true,
-      // },
       {
         file: packageJson.main,
+        format: 'cjs',
+        sourcemap: true,
+      },
+      {
+        file: packageJson.module,
         format: 'esm',
         sourcemap: true,
       },
@@ -50,7 +50,7 @@ export default [
   {
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    plugins: [dts()],
+    plugins: [dts()], // DOCS: dts methods genrates TS declaration file
     external: [/\.css$/], //Excludes CSS files from being bundled.
   },
 ];

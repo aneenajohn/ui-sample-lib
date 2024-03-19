@@ -40,6 +40,6 @@ export const BtnWithClickHandler: Story = {
   args: {
     variant: 'secondary',
     children: 'Click me!',
-    onClick: () => alert('Button is clicked!'),
+    onClick: () => alert('summa summa la nonda kudathu bro!'),
   },
 };

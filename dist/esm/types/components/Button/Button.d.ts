@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import './Button.css';
 type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
     variant: 'primary' | 'secondary';

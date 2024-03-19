@@ -1,3 +1,5 @@
+'use strict';
+
 var jsxRuntime = {exports: {}};
 
 var reactJsxRuntime_production_min = {};
@@ -4154,36 +4156,6 @@ if (process.env.NODE_ENV === 'production') {
 
 var jsxRuntimeExports = jsxRuntime.exports;
 
-function styleInject(css, ref) {
-  if ( ref === void 0 ) ref = {};
-  var insertAt = ref.insertAt;
-
-  if (!css || typeof document === 'undefined') { return; }
-
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var css_248z = "button:hover{transform:scale(1.2)}button:disabled{cursor:none}";
-styleInject(css_248z);
-
 const Button = ({ variant, ...props }) => {
     return (jsxRuntimeExports.jsx("button", { style: {
             background: variant === 'primary' ? '#7676c9' : '#dc9d54',
@@ -4193,5 +4165,5 @@ const Button = ({ variant, ...props }) => {
         }, className: 'button', ...props, children: props.children }));
 };
 
-export { Button };
+exports.Button = Button;
 //# sourceMappingURL=index.js.map
